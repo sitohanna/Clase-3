@@ -1,0 +1,123 @@
+* {margin: 15px;
+    padding: 0;
+    }
+
+body {
+    background-color: aliceblue ;
+   
+       /*Cambio familia de la tipografia*/
+       
+     font-family:sans-serif ;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%
+     
+    
+}
+
+.header-container {
+    padding: 1px auto;
+
+      /*Habilitar flex*/
+    display: flex;
+    justify-content: center;
+}
+.header-container:hover {
+    /*animation-name
+    animation-duration*/
+    animation: changeColor 6s;
+}
+@keyframes changeColor {
+    0% {
+        background-color: #93bdee;
+    }
+    
+    50% {
+        background-color: rgb(202,225,253);
+        border: black;
+    }
+    100% {
+        background-color: rgb(202,245,253);
+    }
+}
+
+/*pongo nombre del header etiquetado*/
+.header {
+    border: 1px solid rgb(124, 119, 119);
+    /*El porcentaje de distribución es el que avisa a flexbox*/
+    width: 100%;
+    /*habilito flex*/
+    display: flex;
+    /*Alinear horizontalmente*/
+  justify-content: center;
+  /*Habilito flexbok*/
+    display: flex;
+   /* Alineo y distribuyo con space-around*/
+   justify-content: space-around;
+
+/*Fin estilos del header*/
+}
+
+.Section-container {
+    
+    /*El porcentaje de distribución es el que avisa a flexbox*/
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    transition-property: all ;
+
+    /*El tiempo que dura la traniscion*/
+    transition-duration: 1s
+}
+/*Pseudo clase: hover que al pasar el mouse por encima
+del elemento que lo tenga aplicado, va a pasar lo que 
+le digamos entre {} */
+.Section-container:hover{
+    /*Transformación*/ /*Scale permite poner un numero entero sin unidades de medida para modificar un elemento*/ 
+    transform: rotate(360deg) scale(1) translateY(10px);
+    transition: all 0,5s;
+}
+@media  (max-width: 300px) {
+    .body .header {
+        background-color: #93bdee;
+    flex-direction: column; 
+    text-align: center;
+    width: 100%;
+}
+    }
+
+
+     
+
+#Biografia { text-align: center;}
+#SodaStereo {text-align: center;}
+#Solista {text-align: center;}
+#Discografía {text-align: center;}
+#Galería { text-align: center;}
+
+
+img { 
+    /*al 100% hace que se acomoden automaticamente las imagenes al flex-wrap*/
+    width: 100%;
+}
+
+
+.fa-facebook-square:hover {
+    color:#3B5998;
+    }
+    .fa-twitter-square:hover {
+    color:#55acee;
+    }
+    .fa-facebook-square {
+    font-size: 52px;
+    color: gray;
+    }
+    .fa-twitter-square {
+    font-size: 52px;
+    color: gray;
+    }
+ 
+
+.Footer { 
+    display:flex;
+    text-align: center;
+} 
+   
